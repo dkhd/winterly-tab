@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+# ❄️ Winterly Tab ❄️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Beautifully replace new tab screen with winter themed background. Image background automatically changed every 5 minutes, or you can change it manually.
 
-## Available Scripts
+![Screenshot](docs/images/winterly_tab_01.png)
 
-In the project directory, you can run:
+Winterly Tab is made to be clean and minimalist new tab replacement for your browser. All images are taken from [Unsplash](https://unsplash.com/s/photos/winter?orientation=landscape).
 
-### `yarn start`
+<details>
+<summary>
+See more screenshots
+</summary>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Screenshot](docs/images/winterly_tab_02.png)
+![Screenshot](docs/images/winterly_tab_03.png)
+![Screenshot](docs/images/winterly_tab_04.png)
+![Screenshot](docs/images/winterly_tab_05.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+</details>
 
-### `yarn test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📡 Installation
 
-### `yarn build`
+To install this extension, download from Chrome Web Store _(link will be updated later)_.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🔧 Development
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This extension is made using `create-react-app`. To run this extension locally, do the following steps:
 
-### `yarn eject`
+1. Fork this repository
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+2. Clone the forked repository using this command
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+`$ git clone https://github.com/<your_username>/winterly-tab.git`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+3. Navigate to cloned directory
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+`$ cd winterly-tab`
 
-## Learn More
+4. Install all dependencies
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+`$ npm install`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. Run the project
 
-### Code Splitting
+`$ npm start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 💡 Testing Locally
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Build the project using this command
 
-### Making a Progressive Web App
+`$ npm run build`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. Follow [this guide](https://support.google.com/chrome/a/answer/2714278?hl=en) to test the extension locally.
 
-### Advanced Configuration
+3. Be sure to use `build` directory in the project root directory when testing locally.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 👋 Contribution
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+_to be updated later_
 
-### `yarn build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🧑‍💻 Credits
+
+This extension is brought to you by **Diky Hadna** ([@dkhd](https://github.com/dkhd)).
+
+---
+
+## 📝 License
+
+The MIT License (MIT)
+
+Copyright (c) 2021 Diky Hadna
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
