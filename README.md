@@ -62,9 +62,11 @@ This extension is made using `create-react-app`. To run this extension locally, 
 
 ---
 
-## 👋 Contribution
+## 🎃 Contribution for Hacktoberfest 🎃
 
 🎉 Thank you for your interest in contributing to this project 🎉 
+
+This project is open for contribution for 🎃 Hacktoberfest 2021 🎃
 
 Before you start to contribute, I recommend you to read the [CONTRIBUTING.md](CONTRIBUTING.md).
 
