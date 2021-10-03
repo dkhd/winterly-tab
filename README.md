@@ -64,7 +64,9 @@ This extension is made using `create-react-app`. To run this extension locally, 
 
 ## 👋 Contribution
 
-_to be updated later_
+🎉 Thank you for your interest in contributing to this project 🎉 
+
+Before you start to contribute, I recommend you to read the [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
