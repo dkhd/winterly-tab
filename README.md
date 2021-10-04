@@ -22,7 +22,9 @@ See more screenshots
 
 ## 📡 Installation
 
-To install this extension, download from Chrome Web Store _(link will be updated later)_.
+To install this extension, download from these channels:
+1. Chrome Web Store: _(pending review)_
+2. Edge Add-ons: _(pending review)_
 
 ---
 
