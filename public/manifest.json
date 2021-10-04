@@ -3,7 +3,7 @@
   "name": "Winterly Tab",
   "author": "Diky hadna",
   "version": "0.0.1",
-  "description": "Beautifully replace new-tab screen with winter themed background.",
+  "description": "Beautifully replace new tab screen with simple and minimalist winter themed background.",
   "icons": {
     "16": "icons/winterly16x16.png",
     "32": "icons/winterly32x32.png",
