@@ -23,8 +23,11 @@ See more screenshots
 ## 📡 Installation
 
 To install this extension, download from these channels:
-1. Chrome Web Store: _(pending review)_
-2. Edge Add-ons: _(pending review)_
+
+- Edge: [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/winterly-tab/pbpanekbjohgcgfejhoelngbinagbclj)
+- Chrome: _(pending review)_
+- Firefox: _(not yet tested)_
+- Safari: _(not yet tested)_
 
 ---
 
