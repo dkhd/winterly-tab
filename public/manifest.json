@@ -3,7 +3,7 @@
   "name": "Winterly Tab",
   "author": "Diky hadna",
   "version": "0.0.1",
-  "description": "Beautifully replace new tab screen with winter themed background. Image background automatically changed every 5 minutes, or you can change it manually.",
+  "description": "Beautifully replace new tab screen with simple and minimalist winter themed background.",
   "icons": {
     "16": "snowflake.png",
     "48": "snowflake.png",
