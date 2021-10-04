@@ -1,13 +1,14 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Winterly Tab",
   "author": "Diky hadna",
   "version": "0.0.1",
-  "description": "Beautifully replace new tab screen with winter themed background. Image background automatically changed every 5 minutes, or you can change it manually.",
+  "description": "Beautifully replace new-tab screen with winter themed background.",
   "icons": {
-    "16": "snowflake.png",
-    "48": "snowflake.png",
-    "128": "snowflake.png"
+    "16": "icons/winterly16x16.png",
+    "32": "icons/winterly32x32.png",
+    "48": "icons/winterly48x48.png",
+    "128": "icons/winterly128x128.png"
   },
   "chrome_url_overrides": {
     "newtab": "index.html"
