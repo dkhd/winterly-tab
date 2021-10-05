@@ -28,7 +28,7 @@ To install this extension, download from these channels:
 | - | - |
 | Edge | [Download from Microsoft Edge Add-ons Website](https://microsoftedge.microsoft.com/addons/detail/winterly-tab/pbpanekbjohgcgfejhoelngbinagbclj) |
 | Chrome | [Download from Chrome Web Store](https://chrome.google.com/webstore/detail/winterly-tab/fcbaofhfpeakjobpnemojmibbnkpgigi) |
-| Firefox | _(not yet submitted)_ |
+| Firefox | _(in review)_ |
 | Safari | _(not yet submitted)_
 
 ---
