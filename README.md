@@ -24,10 +24,12 @@ See more screenshots
 
 To install this extension, download from these channels:
 
-- Edge: [Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/winterly-tab/pbpanekbjohgcgfejhoelngbinagbclj)
-- Chrome: _(pending review)_
-- Firefox: _(not yet tested)_
-- Safari: _(not yet tested)_
+| Web Browser | Download Link |
+| - | - |
+| Edge | [Download from Microsoft Edge Add-ons Website](https://microsoftedge.microsoft.com/addons/detail/winterly-tab/pbpanekbjohgcgfejhoelngbinagbclj) |
+| Chrome | [Download from Chrome Web Store](https://chrome.google.com/webstore/detail/winterly-tab/fcbaofhfpeakjobpnemojmibbnkpgigi) |
+| Firefox | _(not yet submitted)_ |
+| Safari | _(not yet submitted)_
 
 ---
 
