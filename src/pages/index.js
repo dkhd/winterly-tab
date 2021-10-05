@@ -2,13 +2,18 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Blurhash } from "react-blurhash";
 
+import Clock from "../components/clock";
+
 function Home(props) {
   const [data, setData] = useState({});
   useEffect(() => {
     retrieveImage();
-    setTimeout(() => {
+    const timer = setInterval(() => {
       retrieveImage();
     }, 30000);
+    return () => {
+      clearInterval(timer);
+    };
   }, []);
 
   const retrieveImage = () => {
@@ -34,7 +39,9 @@ function Home(props) {
               backgroundRepeat: "no-repeat",
             }}
           />
-
+          <div className="absolute bottom-5 left-5 flex flex-row w-100 text-sm text-white p-3 bg-opacity-10 bg-black">
+            <Clock></Clock>
+          </div>
           <div className="absolute bottom-5 right-5 flex flex-row w-100 text-sm text-white p-3 bg-opacity-10 bg-black">
             <span>
               Photo by{" "}
