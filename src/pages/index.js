@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { Blurhash } from "react-blurhash";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
+import { retrieveImage } from "../util/index";
 
 import Clock from "../components/clock";
 
@@ -10,25 +10,22 @@ function Home(props) {
 
   const handleFullscreen = useFullScreenHandle();
 
-  useEffect(() => {
-    retrieveImage();
+  useEffect(async () => {
+    imageHandler();
     const timer = setInterval(() => {
-      retrieveImage();
+      imageHandler();
     }, 30000);
     return () => {
       clearInterval(timer);
     };
   }, []);
+  console.log(data)
 
-  const retrieveImage = () => {
-    axios.get("https://qolqi.sse.codesandbox.io/images").then((res) => {
-      const totalImage = res.data.length;
-      const min = Math.ceil(0);
-      const max = Math.floor(totalImage);
-      const n = Math.floor(Math.random() * (max - min + 1)) + min;
-      setData(res.data[n]);
-    });
+  const imageHandler = async () => {
+    const temp = await retrieveImage();
+    setData(temp);
   };
+
   return (
     <div>
       {data.hasOwnProperty("blur_hash") ? (
@@ -38,7 +35,7 @@ function Home(props) {
             <div
               className="absolute top-0 left-0 w-screen min-h-screen"
               style={{
-                backgroundImage: "url(" + data.urls.full + ")",
+                backgroundImage: "url(" + data.urls.regular + ")",
                 backgroundSize: "cover",
                 backgroundPosition: "center center",
                 backgroundRepeat: "no-repeat",
@@ -63,7 +60,7 @@ function Home(props) {
               &nbsp; &middot; &nbsp;
               <button
                 className="flex flex-row items-center gap-1"
-                onClick={retrieveImage}
+                onClick={imageHandler}
               >
                 <span className="font-medium">Change Background</span>
               </button>{" "}
