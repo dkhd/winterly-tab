@@ -8,7 +8,7 @@ Winterly Tab is made to be clean and minimalist new tab replacement for your bro
 
 <details>
 <summary>
-See more screenshots
+Click to see more screenshots
 </summary>
 
 ![Screenshot](docs/images/winterly_tab_02.png)
@@ -20,16 +20,26 @@ See more screenshots
 
 ---
 
+## 🌟 Featured by Microsoft
+
+Whoa! I still can believe this, but Winterly Tab is featured by Microsoft in their [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) front page. This really means so much for this project. Thank you [@MSEdgeDev](https://twitter.com/MSEdgeDev) for making this happen. I really appreciate this! 😊
+
+![Featured](docs/images/featured-ms-edge.png)
+
+_This screenshot was taken at October 6, 2021_
+
+---
+
 ## 📡 Installation
 
 To install this extension, download from these channels:
 
-| Web Browser | Download Link |
-| - | - |
-| Edge | [Download from Microsoft Edge Add-ons Website](https://microsoftedge.microsoft.com/addons/detail/winterly-tab/pbpanekbjohgcgfejhoelngbinagbclj) |
-| Chrome | [Download from Chrome Web Store](https://chrome.google.com/webstore/detail/winterly-tab/fcbaofhfpeakjobpnemojmibbnkpgigi) |
-| Firefox | [Download from Mozilla Add-ons for Firefox](https://addons.mozilla.org/en-US/firefox/addon/winterly-tab/)  |
-| Safari | _(not yet supported)_
+| Web Browser | Download Link                                                                                                                                   |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| Edge        | [Download from Microsoft Edge Add-ons Website](https://microsoftedge.microsoft.com/addons/detail/winterly-tab/pbpanekbjohgcgfejhoelngbinagbclj) |
+| Chrome      | [Download from Chrome Web Store](https://chrome.google.com/webstore/detail/winterly-tab/fcbaofhfpeakjobpnemojmibbnkpgigi)                       |
+| Firefox     | [Download from Mozilla Add-ons for Firefox](https://addons.mozilla.org/en-US/firefox/addon/winterly-tab/)                                       |
+| Safari      | _(not yet supported)_                                                                                                                           |
 
 ---
 
@@ -71,7 +81,7 @@ This extension is made using `create-react-app`. To run this extension locally, 
 
 ## 🎃 Contribution for Hacktoberfest 🎃
 
-🎉 Thank you for your interest in contributing to this project 🎉 
+🎉 Thank you for your interest in contributing to this project 🎉
 
 This project is open for contribution for 🎃 Hacktoberfest 2021 🎃
 
