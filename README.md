@@ -1,6 +1,6 @@
 # ❄️ Winterly Tab ❄️
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Beautifully replace new tab screen with winter themed background. Image background automatically changed every 5 minutes, or you can change it manually.
@@ -120,6 +120,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://sandernobel.dev"><img src="https://avatars.githubusercontent.com/u/53917461?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sander Nobel</b></sub></a><br /><a href="https://github.com/dkhd/winterly-tab/commits?author=sano2019" title="Code">💻</a></td>
+    <td align="center"><a href="https://hadna.space"><img src="https://avatars.githubusercontent.com/u/3040839?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Diky Hadna</b></sub></a><br /><a href="https://github.com/dkhd/winterly-tab/commits?author=dkhd" title="Code">💻</a> <a href="https://github.com/dkhd/winterly-tab/commits?author=dkhd" title="Documentation">📖</a></td>
   </tr>
 </table>
 
