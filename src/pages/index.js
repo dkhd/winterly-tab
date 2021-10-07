@@ -10,16 +10,19 @@ function Home(props) {
 
   const handleFullscreen = useFullScreenHandle();
 
-  useEffect(async () => {
-    imageHandler();
-    const timer = setInterval(() => {
+  useEffect(() => {
+    const update = async () => {
       imageHandler();
-    }, 30000);
-    return () => {
-      clearInterval(timer);
+      const timer = setInterval(() => {
+        imageHandler();
+      }, 30000);
+      return () => {
+        clearInterval(timer);
+      };
     };
+    update();
   }, []);
-  console.log(data)
+  console.log(data);
 
   const imageHandler = async () => {
     const temp = await retrieveImage();
