@@ -21,7 +21,8 @@
       "profile": "https://hadna.space",
       "contributions": [
         "code",
-        "doc"
+        "doc",
+        "design"
       ]
     }
   ],
