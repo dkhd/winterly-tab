@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "sano2019",
+      "name": "Sander Nobel",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53917461?v=4",
+      "profile": "https://sandernobel.dev",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "winterly-tab",
+  "projectOwner": "dkhd",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
