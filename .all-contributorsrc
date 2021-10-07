@@ -13,6 +13,16 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "dkhd",
+      "name": "Diky Hadna",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3040839?v=4",
+      "profile": "https://hadna.space",
+      "contributions": [
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
