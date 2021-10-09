@@ -24,6 +24,15 @@
         "doc",
         "design"
       ]
+    },
+    {
+      "login": "je-poy",
+      "name": "Jeff",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19700174?v=4",
+      "profile": "http://je-poy.github.io",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
