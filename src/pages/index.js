@@ -4,9 +4,11 @@ import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import { retrieveImage } from "../util/index";
 
 import Clock from "../components/clock";
+import About from "../components/about";
 
 function Home(props) {
   const [data, setData] = useState({});
+  const [openAbout, setOpenAbout] = useState(false);
 
   const handleFullscreen = useFullScreenHandle();
 
@@ -29,10 +31,15 @@ function Home(props) {
     setData(temp);
   };
 
+  const handleAboutModal = (value) => {
+    setOpenAbout(value)
+  }
+
   return (
     <div>
       {data.hasOwnProperty("blur_hash") ? (
         <FullScreen handle={handleFullscreen}>
+          <About open={openAbout} toggleModal={handleAboutModal}/>
           <div className="w-screen h-screen overflow-hidden">
             <Blurhash hash={data.blur_hash} width="100%" height="100%" />
             <div
@@ -75,17 +82,12 @@ function Home(props) {
                 Fullscreen
               </button>
               &nbsp; &middot; &nbsp;
-              <span>
-                Winterly Tab by{" "}
-                <a
-                  href="https://hadna.space"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-medium"
-                >
-                  Diky Hadna
-                </a>
-              </span>
+              <button
+                className="flex flex-row items-center gap-1 font-medium"
+                onClick={() => { handleAboutModal(true) }}
+              >
+                About
+              </button>
             </div>
           </div>
         </FullScreen>
