@@ -22,7 +22,11 @@ Click to see more screenshots
 </details>
 
 ---
+## 🌏 Web Version
 
+This project is available for you to visit in the web version. This web version will always contain the latest updates & features compared to the browser extension version since updating the browser extension need to be reviewed first by the add-ons or web store administrator, and it takes time.
+
+To see the web version of this project, please visit [tab.winterly.app](https://tab.winterly.app).
 ## 🌟 Featured by Microsoft
 
 Whoa! I still can believe this, but Winterly Tab is featured by Microsoft in their [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home) front page. This really means so much for this project. Thank you [@MSEdgeDev](https://twitter.com/MSEdgeDev) for making this happen. I really appreciate this! 😊
