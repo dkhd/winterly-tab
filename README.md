@@ -123,7 +123,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://sandernobel.dev"><img src="https://avatars.githubusercontent.com/u/53917461?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sander Nobel</b></sub></a><br /><a href="https://github.com/dkhd/winterly-tab/commits?author=sano2019" title="Code">💻</a></td>
+    <td align="center"><a href="https://sandernobel.dev"><img src="https://avatars.githubusercontent.com/u/53917461?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sander Nobel</b></sub></a><br /><a href="https://github.com/dkhd/winterly-tab/commits?author=sano2019" title="Code">💻</a> <a href="https://github.com/dkhd/winterly-tab/commits?author=sano2019" title="Documentation">📖</a></td>
     <td align="center"><a href="https://hadna.space"><img src="https://avatars.githubusercontent.com/u/3040839?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Diky Hadna</b></sub></a><br /><a href="https://github.com/dkhd/winterly-tab/commits?author=dkhd" title="Code">💻</a> <a href="https://github.com/dkhd/winterly-tab/commits?author=dkhd" title="Documentation">📖</a> <a href="#design-dkhd" title="Design">🎨</a></td>
     <td align="center"><a href="http://je-poy.github.io"><img src="https://avatars.githubusercontent.com/u/19700174?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Jeff</b></sub></a><br /><a href="https://github.com/dkhd/winterly-tab/commits?author=je-poy" title="Code">💻</a></td>
   </tr>
