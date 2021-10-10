@@ -9,8 +9,15 @@ import About from "../components/about";
 function Home(props) {
   const [data, setData] = useState({});
   const [openAbout, setOpenAbout] = useState(false);
+  const [searchText, setSearchText] = useState("");
 
   const handleFullscreen = useFullScreenHandle();
+
+  const handleSearch = (e) => {
+    if (e.key === "Enter" && searchText.length){
+      window.location = `https://www.google.com/search?q=${searchText}`
+    }
+  }
 
   useEffect(() => {
     const update = async () => {
@@ -51,11 +58,29 @@ function Home(props) {
                 backgroundRepeat: "no-repeat",
               }}
             />
-            Any fullscreen content here
-            <div className="absolute bottom-5 left-5 flex flex-row w-100 text-sm text-white p-3 bg-opacity-10 bg-black">
+            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 p-3">
+              <div class="relative flex items-center w-third-screen h-12 rounded-md bg-opacity-20 bg-black overflow-hidden">
+                <div class="grid place-items-center h-full w-12 text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+
+                <input
+                  class="peer h-full w-full outline-none text-sm text-white pr-2 bg-transparent placeholder-gray-100"
+                  type="text"
+                  id="search"
+                  placeholder="Search something.."
+                  value={searchText}
+                  onChange={(e)=>setSearchText(e.target.value)}
+                  onKeyDown={handleSearch}
+                />
+              </div>
+            </div>
+            <div className="absolute bottom-5 left-5 flex flex-row w-100 text-sm text-white p-3 bg-opacity-20 bg-black rounded-sm">
               <Clock></Clock>
             </div>
-            <div className="absolute bottom-5 right-5 flex flex-row w-100 text-sm text-white p-3 bg-opacity-10 bg-black">
+            <div className="absolute bottom-5 right-5 flex flex-row w-100 text-sm text-white p-3 bg-opacity-20 bg-black rounded-sm">
               <span>
                 Photo by{" "}
                 <a
