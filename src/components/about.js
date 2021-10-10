@@ -8,14 +8,21 @@ function About(props) {
     name: "Diky Hadna",
     username: "@dkhd",
     link: "https://github.com/dkhd",
+    avatar_url: "https://avatars.githubusercontent.com/u/3040839?v=4"
   };
   const contributors = [
     {
       name: "Sander Nobel",
       username: "@sano2019",
       link: "https://github.com/sano2019",
+      avatar_url: "https://avatars.githubusercontent.com/u/53917461?v=4"
     },
-    { name: "Jeff", username: "@je-poy", link: "https://github.com/je-poy" },
+    {
+      name: "Jeff Canale",
+      username: "@je-poy",
+      link: "https://github.com/je-poy",
+      avatar_url: "https://avatars.githubusercontent.com/u/19700174?v=4"
+    },
   ];
 
   const handleCloseModal = () => {
@@ -68,33 +75,48 @@ function About(props) {
                 change your new tab page with winter-themed background.
               </div>
               <div className="bg-nord6 sm:p-4 sm:pb-2">
-                <div className="sm:flex sm:items-center sm:justify-center font-medium text-xl">
+                <div className="sm:flex sm:items-center sm:justify-center align-middle font-medium text-xl">
                   Maintainer:
                 </div>
                 <div className="sm:flex sm:justy-items-center sm:justify-center">
-                  <div>
-                    {maintainer.name} (
-                    <a
-                      className="text-nord10 font-semibold"
-                      href={maintainer.link}
-                    >
-                      {maintainer.username}
-                    </a>
-                    )
+                  <div className="flex-shrink-0 h-12 w-12 sm:items-center">
+                    <img className="h-12 w-12 rounded-full" src={maintainer.avatar_url} alt="DH" />
+                  </div>
+                  <div className="flex ml-4 sm:items-center">
+                    <div className="font-medium text-gray-900">
+                      {maintainer.name} &nbsp;
+                      (<a
+                        className="text-nord10 font-semibold"
+                        href={maintainer.link}
+                      >
+                        {maintainer.username}
+                      </a>)
+                    </div>
                   </div>
                 </div>
                 <div className="sm:flex sm:items-start font-medium sm:justify-center mt-5 text-xl">
                   Contributors:
                 </div>
-                <div className="flex flex-col sm:justify-center items-center gap ">
+                <div className="flex flex-col sm:justify-center gap gap-1 ">
                   {contributors.map((c) => {
                     return (
-                      <div className="flex-initial">
-                        {c.name} (
-                        <a className="text-nord10 font-semibold" href={c.link}>
-                          {c.username}
-                        </a>
-                        )
+                      <div className="sm:flex sm:justy-items-stretch sm:justify-center gap gap-4">
+                        <div className="flex-shrink-0 h-12 w-12 sm:items-center">
+                          <img className="h-12 w-12 rounded-full" src={c.avatar_url} alt="DH" />
+                        </div>
+                        <div className="flex sm:items-center">
+                          <div className="font-medium text-gray-900">
+                            {c.name}
+                          </div>
+                        </div>
+                        <div className="flex sm:items-center">
+                          (<a
+                            className="text-nord10 font-semibold"
+                            href={c.link}
+                          >
+                            {c.username}
+                          </a>)
+                        </div>
                       </div>
                     );
                   })}
