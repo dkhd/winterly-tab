@@ -102,7 +102,7 @@ function Home(props) {
               &nbsp; &middot; &nbsp;
               <button
                 className="flex flex-row items-center gap-1 font-medium"
-                onClick={handleFullscreen.enter}
+                onClick={!handleFullscreen.active ? handleFullscreen.enter : handleFullscreen.exit}
               >
                 Fullscreen
               </button>
