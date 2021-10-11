@@ -72,6 +72,7 @@ function Home(props) {
                   id="search"
                   placeholder="Search something.."
                   value={searchText}
+                  autoComplete="off"
                   onChange={(e)=>setSearchText(e.target.value)}
                   onKeyDown={handleSearch}
                 />
