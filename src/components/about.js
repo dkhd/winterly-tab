@@ -98,9 +98,9 @@ function About(props) {
                   Contributors:
                 </div>
                 <div className="flex flex-col sm:justify-center gap gap-1 ">
-                  {contributors.map((c) => {
+                  {contributors.map((c,index) => {
                     return (
-                      <div className="sm:flex sm:justy-items-stretch sm:justify-center gap gap-4">
+                      <div key={index} className="sm:flex sm:justy-items-stretch sm:justify-center gap gap-4">
                         <div className="flex-shrink-0 h-12 w-12 sm:items-center">
                           <img className="h-12 w-12 rounded-full" src={c.avatar_url} alt="DH" />
                         </div>

@@ -31,7 +31,7 @@ function Home(props) {
     };
     update();
   }, []);
-  console.log(data);
+  // console.log(data);
 
   const imageHandler = async () => {
     const temp = await retrieveImage();
@@ -52,22 +52,22 @@ function Home(props) {
             <div
               className="absolute top-0 left-0 w-screen min-h-screen"
               style={{
-                backgroundImage: "url(" + data.urls.regular + ")",
+                backgroundImage: `url(${data.urls.full}), url(${data.urls.regular})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center center",
                 backgroundRepeat: "no-repeat",
               }}
             />
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 p-3">
-              <div class="relative flex items-center w-third-screen h-12 rounded-md bg-opacity-20 bg-black overflow-hidden">
-                <div class="grid place-items-center h-full w-12 text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              <div className="relative flex items-center w-third-screen h-12 rounded-md bg-opacity-20 bg-black overflow-hidden">
+                <div className="grid place-items-center h-full w-12 text-white">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </div>
 
                 <input
-                  class="peer h-full w-full outline-none text-sm text-white pr-2 bg-transparent placeholder-gray-100"
+                  className="peer h-full w-full outline-none text-sm text-white pr-2 bg-transparent placeholder-gray-100"
                   type="text"
                   id="search"
                   placeholder="Search something.."
