@@ -15,7 +15,7 @@ function Clock(props) {
     };
   }, []);
 
-  return <div>{time}</div>;
+  return <div data-testid="clock">{time}</div>;
 }
 
 export default Clock;
