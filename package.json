@@ -20,6 +20,7 @@
     "start": "craco start",
     "build": "rm -rf build && INLINE_RUNTIME_CHUNK=false craco build",
     "test": "craco test",
+    "test:coverage": "craco test --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -44,6 +45,7 @@
     "@craco/craco": "^6.3.0",
     "autoprefixer": "^9.8.7",
     "postcss": "^7.0.38",
+    "prop-types": "^15.7.2",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.16"
   }
 }

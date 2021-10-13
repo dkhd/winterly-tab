@@ -1,7 +1,8 @@
 import { Fragment, useRef } from "react";
 import { Dialog, Transition } from "@headlessui/react";
+import PropTypes from 'prop-types';
 
-function About(props) {
+function About({open, toggleModal}) {
   const cancelButtonRef = useRef(null);
 
   const maintainer = {
@@ -26,11 +27,11 @@ function About(props) {
   ];
 
   const handleCloseModal = () => {
-    props.toggleModal(false);
+    toggleModal(false);
   };
 
   return (
-    <Transition.Root show={props.open} as={Fragment}>
+    <Transition.Root show={open} as={Fragment}>
       <Dialog
         as="div"
         className="fixed z-10 inset-0 overflow-y-auto"
@@ -160,6 +161,11 @@ function About(props) {
       </Dialog>
     </Transition.Root>
   );
+}
+
+About.propTypes = {
+  open: PropTypes.bool,
+  toggleModal: PropTypes.func
 }
 
 export default About;
