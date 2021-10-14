@@ -62,6 +62,15 @@
         "code",
         "test"
       ]
+    },
+    {
+      "login": "bigsbunny",
+      "name": "Bighnesh Sahoo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56313473?v=4",
+      "profile": "https://github.com/bigsbunny",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
