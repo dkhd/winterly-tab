@@ -1,6 +1,6 @@
 # ❄️ Winterly Tab ❄️
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Beautifully replace new tab screen with winter themed background. Image background automatically changed every 5 minutes, or you can change it manually.
@@ -132,6 +132,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://boidushya.com"><img src="https://avatars.githubusercontent.com/u/26746725?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Boidushya</b></sub></a><br /><a href="https://github.com/dkhd/winterly-tab/commits?author=boidushya" title="Code">💻</a></td>
     <td align="center"><a href="https://gladiusmusic.rf.gd"><img src="https://avatars.githubusercontent.com/u/29584664?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ventus</b></sub></a><br /><a href="#ideas-V3ntus" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://berviantoleo.my.id"><img src="https://avatars.githubusercontent.com/u/15927349?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bervianto Leo Pratama</b></sub></a><br /><a href="https://github.com/dkhd/winterly-tab/commits?author=berviantoleo" title="Code">💻</a> <a href="https://github.com/dkhd/winterly-tab/commits?author=berviantoleo" title="Tests">⚠️</a></td>
+    <td align="center"><a href="https://github.com/bigsbunny"><img src="https://avatars.githubusercontent.com/u/56313473?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bighnesh Sahoo</b></sub></a><br /><a href="#ideas-bigsbunny" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
