@@ -16,7 +16,7 @@ function Home(props) {
   const handleFullscreen = useFullScreenHandle();
 
   const handleSearch = (e) => {
-    if (e.key === "Enter" && searchText.length) {
+    if (e.key == "Enter" && searchText.length) {
       window.location = `${baseURL}/search?q=${searchText}`
     }
   }
@@ -130,7 +130,7 @@ function Home(props) {
               <button
                 className="flex flex-row items-center gap-1 font-medium"
                 onClick={() => {
-                  if (showSearch[0] == "visible") {
+                  if (showSearch[0] === "visible") {
                     toggleSearch(["invisible", "visible"]);
                   } else {
                     toggleSearch(["visible", "invisible"]);
