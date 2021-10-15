@@ -16,14 +16,14 @@ function Home(props) {
   const handleFullscreen = useFullScreenHandle();
 
   const handleSearch = (e) => {
-    if (e.key == "Enter" && searchText.length) {
+    if (e.key === "Enter" && searchText.length) {
       window.location = `${baseURL}/search?q=${searchText}`
     }
   }
 
   useEffect(
     () => {
-      toggleBaseURL(showSearch[0] == "visible" ? "https://www.google.com" : "https://www.bing.com");
+      toggleBaseURL(showSearch[0] === "visible" ? "https://www.google.com" : "https://www.bing.com");
     }
     , [showSearch]);
 
