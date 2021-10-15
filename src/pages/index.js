@@ -7,6 +7,7 @@ import Clock from "../components/clock";
 import About from "../components/about";
 
 function Home(props) {
+  const [dim, setDim] = useState("filter brightness-50")
   const [data, setData] = useState({});
   const [openAbout, setOpenAbout] = useState(false);
   const [searchText, setSearchText] = useState("");
@@ -14,7 +15,7 @@ function Home(props) {
   const handleFullscreen = useFullScreenHandle();
 
   const handleSearch = (e) => {
-    if (e.key === "Enter" && searchText.length){
+    if (e.key === "Enter" && searchText.length) {
       window.location = `https://www.google.com/search?q=${searchText}`
     }
   }
@@ -46,11 +47,11 @@ function Home(props) {
     <div>
       {data.hasOwnProperty("blur_hash") ? (
         <FullScreen handle={handleFullscreen}>
-          <About open={openAbout} toggleModal={handleAboutModal}/>
+          <About open={openAbout} toggleModal={handleAboutModal} />
           <div className="w-screen h-screen overflow-hidden">
             <Blurhash hash={data.blur_hash} width="100%" height="100%" />
             <div
-              className="absolute top-0 left-0 w-screen min-h-screen"
+              className={"absolute top-0 left-0 w-screen min-h-screen " + dim}
               style={{
                 backgroundImage: `url(${data.urls.full}), url(${data.urls.regular})`,
                 backgroundSize: "cover",
@@ -67,13 +68,19 @@ function Home(props) {
                 </div>
 
                 <input
+                  onFocus={(e) => {
+                    setDim("filter brightness-50");
+                  }}
+                  onBlur={(e) => {
+                    setDim("");
+                  }}
                   className="peer h-full w-full outline-none text-sm text-white pr-2 bg-transparent placeholder-gray-100"
                   type="text"
                   id="search"
                   placeholder="Search something.."
                   value={searchText}
                   autoComplete="off"
-                  onChange={(e)=>setSearchText(e.target.value)}
+                  onChange={(e) => setSearchText(e.target.value)}
                   onKeyDown={handleSearch}
                 />
               </div>
@@ -93,7 +100,9 @@ function Home(props) {
                   {data.user.name}
                 </a>
               </span>
-              &nbsp; &middot; &nbsp;
+              &nbsp; &midonFocus={(e) => {
+                console.log('Focused on input');
+              }}dot; &nbsp;
               <button
                 className="flex flex-row items-center gap-1"
                 onClick={imageHandler}
