@@ -25,7 +25,7 @@ function Home(props) {
     () => {
       toggleBaseURL(showSearch[0] == "visible" ? "https://www.google.com" : "https://www.bing.com");
     }
-    , showSearch);
+    , [showSearch]);
 
   useEffect(() => {
     const update = async () => {
