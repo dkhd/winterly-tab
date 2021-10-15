@@ -100,9 +100,7 @@ function Home(props) {
                   {data.user.name}
                 </a>
               </span>
-              &nbsp; &midonFocus={(e) => {
-                console.log('Focused on input');
-              }}dot; &nbsp;
+              &nbsp; &middot; &nbsp;
               <button
                 className="flex flex-row items-center gap-1"
                 onClick={imageHandler}
