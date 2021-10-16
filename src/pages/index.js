@@ -7,7 +7,7 @@ import Clock from "../components/clock";
 import About from "../components/about";
 
 function Home(props) {
-  const [dim, setDim] = useState("filter brightness-50")
+  const [dim, setDim] = useState("")
   const [data, setData] = useState({});
   const [openAbout, setOpenAbout] = useState(false);
   const [searchText, setSearchText] = useState("");
