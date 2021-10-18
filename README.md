@@ -135,7 +135,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/bigsbunny"><img src="https://avatars.githubusercontent.com/u/56313473?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Bighnesh Sahoo</b></sub></a><br /><a href="#ideas-bigsbunny" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
   <tr>
-    <td align="center"><a href="https://github.com/shukapurv"><img src="https://avatars.githubusercontent.com/u/73848723?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Apoorve shukla</b></sub></a><br /><a href="#ideas-shukapurv" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/shukapurv"><img src="https://avatars.githubusercontent.com/u/73848723?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Apoorve shukla</b></sub></a><br /><a href="#ideas-shukapurv" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://github.com/dkhd/winterly-tab/commits?author=shukapurv" title="Code">💻</a></td>
   </tr>
 </table>
 
