@@ -2,13 +2,18 @@ import React, { useEffect, useState } from "react";
 import { Blurhash } from "react-blurhash";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import { retrieveImage } from "../util/index";
+import InfoIcon from '@mui/icons-material/Info';
+import FullscreenIcon from '@mui/icons-material/Fullscreen';
+import AutorenewIcon from '@mui/icons-material/Autorenew';
 
 import Clock from "../components/clock";
 import About from "../components/about";
+import Tooltip from "../components/Tooltip/tooltip";
 
 function Home(props) {
   let [baseURL, toggleBaseURL] = useState("https://www.google.com");
   const [showSearch, toggleSearch] = useState(["visible", "invisible"]);
+  const [dim, setDim] = useState("")
   const [data, setData] = useState({});
   const [openAbout, setOpenAbout] = useState(false);
   const [searchText, setSearchText] = useState("");
@@ -17,7 +22,7 @@ function Home(props) {
 
   const handleSearch = (e) => {
     if (e.key === "Enter" && searchText.length) {
-      window.location = `${baseURL}/search?q=${searchText}`
+      window.location = `${baseURL}/search?q=${searchText}
     }
   }
 
@@ -54,11 +59,11 @@ function Home(props) {
     <div>
       {data.hasOwnProperty("blur_hash") ? (
         <FullScreen handle={handleFullscreen}>
-          <About open={openAbout} toggleModal={handleAboutModal}/>
+          <About open={openAbout} toggleModal={handleAboutModal} />
           <div className="w-screen h-screen overflow-hidden">
             <Blurhash hash={data.blur_hash} width="100%" height="100%" />
             <div
-              className="absolute top-0 left-0 w-screen min-h-screen"
+              className={"absolute top-0 left-0 w-screen min-h-screen " + dim}
               style={{
                 backgroundImage: `url(${data.urls.full}), url(${data.urls.regular})`,
                 backgroundSize: "cover",
@@ -79,13 +84,19 @@ function Home(props) {
                 </div>
 
                 <input
+                  onFocus={(e) => {
+                    setDim("filter brightness-50");
+                  }}
+                  onBlur={(e) => {
+                    setDim("");
+                  }}
                   className="peer h-full w-full outline-none text-sm text-white pr-2 bg-transparent placeholder-gray-100"
                   type="text"
                   id="search"
                   placeholder="Search something.."
                   value={searchText}
                   autoComplete="off"
-                  onChange={(e)=>setSearchText(e.target.value)}
+                  onChange={(e) => setSearchText(e.target.value)}
                   onKeyDown={handleSearch}
                 />
               </div>
@@ -100,32 +111,38 @@ function Home(props) {
                   href={data.links.html}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-medium"
+                  className="font-medium hover:text-gray-200"
                 >
                   {data.user.name}
                 </a>
               </span>
               &nbsp; &middot; &nbsp;
-              <button
-                className="flex flex-row items-center gap-1"
-                onClick={imageHandler}
-              >
-                <span className="font-medium">Change Background</span>
-              </button>{" "}
+              <Tooltip tooltip="Change Background">
+                <button
+                  className="flex flex-row items-center gap-1 hover:text-gray-200"
+                  onClick={imageHandler}
+                >
+                  <AutorenewIcon />
+                </button>{" "}
+              </Tooltip>
               &nbsp; &middot; &nbsp;
-              <button
-                className="flex flex-row items-center gap-1 font-medium"
-                onClick={!handleFullscreen.active ? handleFullscreen.enter : handleFullscreen.exit}
-              >
-                Fullscreen
-              </button>
+              <Tooltip tooltip="Fullscreen">
+                <button
+                  className="flex flex-row items-center gap-1 font-medium hover:text-gray-200"
+                  onClick={!handleFullscreen.active ? handleFullscreen.enter : handleFullscreen.exit}
+                >
+                  <FullscreenIcon />
+                </button>
+              </Tooltip>
               &nbsp; &middot; &nbsp;
-              <button
-                className="flex flex-row items-center gap-1 font-medium"
-                onClick={() => { handleAboutModal(true) }}
-              >
-                About
-              </button>
+               <Tooltip tooltip="About">
+                <button
+                  className="flex flex-row items-center gap-1 font-medium hover:text-gray-200"
+                  onClick={() => { handleAboutModal(true) }}
+                >
+                  <InfoIcon />
+                </button>
+              </Tooltip>
               &nbsp; &middot; &nbsp;
               <button
                 className="flex flex-row items-center gap-1 font-medium"
