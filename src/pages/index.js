@@ -2,9 +2,13 @@ import React, { useEffect, useState } from "react";
 import { Blurhash } from "react-blurhash";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import { retrieveImage } from "../util/index";
+import InfoIcon from '@mui/icons-material/Info';
+import FullscreenIcon from '@mui/icons-material/Fullscreen';
+import AutorenewIcon from '@mui/icons-material/Autorenew';
 
 import Clock from "../components/clock";
 import About from "../components/about";
+import Tooltip from "../components/Tooltip/tooltip";
 
 function Home(props) {
   const [dim, setDim] = useState("")
@@ -95,32 +99,38 @@ function Home(props) {
                   href={data.links.html}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-medium"
+                  className="font-medium hover:text-gray-200"
                 >
                   {data.user.name}
                 </a>
               </span>
               &nbsp; &middot; &nbsp;
-              <button
-                className="flex flex-row items-center gap-1"
-                onClick={imageHandler}
-              >
-                <span className="font-medium">Change Background</span>
-              </button>{" "}
+              <Tooltip tooltip="Change Background">
+                <button
+                  className="flex flex-row items-center gap-1 hover:text-gray-200"
+                  onClick={imageHandler}
+                >
+                  <AutorenewIcon />
+                </button>{" "}
+              </Tooltip>
               &nbsp; &middot; &nbsp;
-              <button
-                className="flex flex-row items-center gap-1 font-medium"
-                onClick={!handleFullscreen.active ? handleFullscreen.enter : handleFullscreen.exit}
-              >
-                Fullscreen
-              </button>
+              <Tooltip tooltip="Fullscreen">
+                <button
+                  className="flex flex-row items-center gap-1 font-medium hover:text-gray-200"
+                  onClick={!handleFullscreen.active ? handleFullscreen.enter : handleFullscreen.exit}
+                >
+                  <FullscreenIcon />
+                </button>
+              </Tooltip>
               &nbsp; &middot; &nbsp;
-              <button
-                className="flex flex-row items-center gap-1 font-medium"
-                onClick={() => { handleAboutModal(true) }}
-              >
-                About
-              </button>
+              <Tooltip tooltip="About">
+                <button
+                  className="flex flex-row items-center gap-1 font-medium hover:text-gray-200"
+                  onClick={() => { handleAboutModal(true) }}
+                >
+                  <InfoIcon />
+                </button>
+              </Tooltip>
             </div>
           </div>
         </FullScreen>
