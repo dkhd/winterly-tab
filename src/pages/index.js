@@ -5,6 +5,8 @@ import { retrieveImage } from "../util/index";
 import InfoIcon from '@mui/icons-material/Info';
 import FullscreenIcon from '@mui/icons-material/Fullscreen';
 import AutorenewIcon from '@mui/icons-material/Autorenew';
+import CameraIcon from '@mui/icons-material/Camera';
+import SearchIcon from '@mui/icons-material/Search';
 
 import Clock from "../components/clock";
 import About from "../components/about";
@@ -105,17 +107,16 @@ function Home(props) {
               <Clock></Clock>
             </div>
             <div className="absolute bottom-5 right-5 flex flex-row w-100 text-sm text-white p-3 bg-opacity-20 bg-black rounded-sm">
-              <span>
-                Photo by{" "}
+              <Tooltip tooltip={`Photo by ${data.user.name}`}>
                 <a
                   href={data.links.html}
                   target="_blank"
                   rel="noreferrer"
                   className="font-medium hover:text-gray-200"
                 >
-                  {data.user.name}
+                  <CameraIcon />
                 </a>
-              </span>
+              </Tooltip>
               &nbsp; &middot; &nbsp;
               <Tooltip tooltip="Change Background">
                 <button
@@ -135,7 +136,7 @@ function Home(props) {
                 </button>
               </Tooltip>
               &nbsp; &middot; &nbsp;
-               <Tooltip tooltip="About">
+              <Tooltip tooltip="About">
                 <button
                   className="flex flex-row items-center gap-1 font-medium hover:text-gray-200"
                   onClick={() => { handleAboutModal(true) }}
@@ -144,19 +145,21 @@ function Home(props) {
                 </button>
               </Tooltip>
               &nbsp; &middot; &nbsp;
-              <button
-                className="flex flex-row items-center gap-1 font-medium"
-                onClick={() => {
-                  if (showSearch[0] === "visible") {
-                    toggleSearch(["invisible", "visible"]);
-                  } else {
-                    toggleSearch(["visible", "invisible"]);
-                  }
+              <Tooltip tooltip="Change search engine" addon="break-word">
+                <button
+                  className="flex flex-row items-center gap-1 font-medium hover:text-gray-200"
+                  onClick={() => {
+                    if (showSearch[0] === "visible") {
+                      toggleSearch(["invisible", "visible"]);
+                    } else {
+                      toggleSearch(["visible", "invisible"]);
+                    }
 
-                }}
-              >
-                Change search Engine
-              </button>
+                  }}
+                >
+                  <SearchIcon />
+                </button>
+              </Tooltip>
             </div>
           </div>
         </FullScreen>
