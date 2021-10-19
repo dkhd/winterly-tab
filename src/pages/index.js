@@ -22,7 +22,7 @@ function Home(props) {
 
   const handleSearch = (e) => {
     if (e.key === "Enter" && searchText.length) {
-      window.location = `${baseURL}/search?q=${searchText}
+      window.location = `${baseURL}/search?q=${searchText}`
     }
   }
 
