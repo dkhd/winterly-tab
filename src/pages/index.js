@@ -8,6 +8,7 @@ import AutorenewIcon from '@mui/icons-material/Autorenew';
 
 import Clock from "../components/clock";
 import About from "../components/about";
+import Quote from "../components/quotes";
 import Tooltip from "../components/Tooltip/tooltip";
 
 function Home(props) {
@@ -103,6 +104,9 @@ function Home(props) {
             </div>
             <div className="absolute bottom-5 left-5 flex flex-row w-100 text-sm text-white p-3 bg-opacity-20 bg-black rounded-sm">
               <Clock></Clock>
+            </div>
+            <div className="absolute bottom-5 left-2/4 transform -translate-x-2/4 w-100 text-base text-white text-center bg-opacity-20 bg-black rounded-sm">
+              <Quote />
             </div>
             <div className="absolute bottom-5 right-5 flex flex-row w-100 text-sm text-white p-3 bg-opacity-20 bg-black rounded-sm">
               <span>
