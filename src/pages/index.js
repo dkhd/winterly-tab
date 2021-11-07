@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Blurhash } from "react-blurhash";
+import { SiMicrosoftbing } from "react-icons/si";
+import { RiGoogleLine } from "react-icons/ri";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import { retrieveImage } from "../util/index";
-import InfoIcon from '@mui/icons-material/Info';
-import FullscreenIcon from '@mui/icons-material/Fullscreen';
-import AutorenewIcon from '@mui/icons-material/Autorenew';
-import CameraIcon from '@mui/icons-material/Camera';
-import SearchIcon from '@mui/icons-material/Search';
+import InfoIcon from "@mui/icons-material/Info";
+import FullscreenIcon from "@mui/icons-material/Fullscreen";
+import AutorenewIcon from "@mui/icons-material/Autorenew";
+import CameraIcon from "@mui/icons-material/Camera";
+import SearchIcon from "@mui/icons-material/Search";
 
 import Clock from "../components/clock";
 import About from "../components/about";
@@ -16,7 +18,7 @@ import Tooltip from "../components/Tooltip/tooltip";
 function Home(props) {
   let [baseURL, toggleBaseURL] = useState("https://www.google.com");
   const [showSearch, toggleSearch] = useState(["visible", "invisible"]);
-  const [dim, setDim] = useState("")
+  const [dim, setDim] = useState("");
   const [data, setData] = useState({});
   const [openAbout, setOpenAbout] = useState(false);
   const [searchText, setSearchText] = useState("");
@@ -25,15 +27,17 @@ function Home(props) {
 
   const handleSearch = (e) => {
     if (e.key === "Enter" && searchText.length) {
-      window.location = `${baseURL}/search?q=${searchText}`
+      window.location = `${baseURL}/search?q=${searchText}`;
     }
-  }
+  };
 
-  useEffect(
-    () => {
-      toggleBaseURL(showSearch[0] === "visible" ? "https://www.google.com" : "https://www.bing.com");
-    }
-    , [showSearch]);
+  useEffect(() => {
+    toggleBaseURL(
+      showSearch[0] === "visible"
+        ? "https://www.google.com"
+        : "https://www.bing.com"
+    );
+  }, [showSearch]);
 
   useEffect(() => {
     const update = async () => {
@@ -55,8 +59,8 @@ function Home(props) {
   };
 
   const handleAboutModal = (value) => {
-    setOpenAbout(value)
-  }
+    setOpenAbout(value);
+  };
 
   return (
     <div>
@@ -75,15 +79,13 @@ function Home(props) {
               }}
             />
             <div className="flex absolute top-0 left-1/2 transform -translate-x-1/2 p-3">
-              <div className="flex text-white mx-2 place-items-center items-center h-12 w-12 rounded-md bg-opacity-20 overflow-hidden">
-                <svg className={"h-8 w-8 text-white-500 " + showSearch[0]} width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z" />  <path d="M17.788 5.108A9 9 0 1021 12h-8" /></svg>
-                <svg className={showSearch[1]} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 32 32"><path d="M6.1 0l6.392 2.25v22.5l9.004-5.198-4.414-2.07-2.785-6.932 14.186 4.984v7.246L12.497 32 6.1 28.442z" fill="white" /></svg>
-              </div>
               <div className="relative flex items-center w-third-screen h-12 rounded-md bg-opacity-20 bg-black overflow-hidden">
-                <div className="grid place-items-center h-full w-12 text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                  </svg>
+                <div className="flex text-white mx-2 place-items-center items-center h-12 w-12 rounded-md bg-opacity-20 overflow-hidden">
+                  {showSearch[0] === "visible" ? (
+                    <RiGoogleLine className={"h-8 w-8 text-white-500 "} />
+                  ) : (
+                    <SiMicrosoftbing className={"h-8 w-8 text-white-500 "} />
+                  )}
                 </div>
 
                 <input
@@ -134,7 +136,11 @@ function Home(props) {
               <Tooltip tooltip="Fullscreen">
                 <button
                   className="flex flex-row items-center gap-1 font-medium hover:text-gray-200"
-                  onClick={!handleFullscreen.active ? handleFullscreen.enter : handleFullscreen.exit}
+                  onClick={
+                    !handleFullscreen.active
+                      ? handleFullscreen.enter
+                      : handleFullscreen.exit
+                  }
                 >
                   <FullscreenIcon />
                 </button>
@@ -143,7 +149,9 @@ function Home(props) {
               <Tooltip tooltip="About">
                 <button
                   className="flex flex-row items-center gap-1 font-medium hover:text-gray-200"
-                  onClick={() => { handleAboutModal(true) }}
+                  onClick={() => {
+                    handleAboutModal(true);
+                  }}
                 >
                   <InfoIcon />
                 </button>
@@ -158,7 +166,6 @@ function Home(props) {
                     } else {
                       toggleSearch(["visible", "invisible"]);
                     }
-
                   }}
                 >
                   <SearchIcon />
