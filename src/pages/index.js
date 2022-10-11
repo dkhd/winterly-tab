@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { Blurhash } from "react-blurhash";
+import { SiMicrosoftbing } from "react-icons/si";
+import { RiGoogleLine } from "react-icons/ri";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import { retrieveImage } from "../util/index";
-import InfoIcon from '@mui/icons-material/Info';
-import FullscreenIcon from '@mui/icons-material/Fullscreen';
-import AutorenewIcon from '@mui/icons-material/Autorenew';
-import CameraIcon from '@mui/icons-material/Camera';
-import SearchIcon from '@mui/icons-material/Search';
+import InfoIcon from "@mui/icons-material/Info";
+import FullscreenIcon from "@mui/icons-material/Fullscreen";
+import AutorenewIcon from "@mui/icons-material/Autorenew";
+import CameraIcon from "@mui/icons-material/Camera";
+import SearchIcon from "@mui/icons-material/Search";
 
 import { ReactComponent as BingLogo } from "../svg/bing.svg";
 import { ReactComponent as GoogleLogo } from "../svg/google.svg";
@@ -29,9 +31,9 @@ function Home(props) {
 
   const handleSearch = (e) => {
     if (e.key === "Enter" && searchText.length) {
-      window.location = `${baseURL}/search?q=${searchText}`
+      window.location = `${baseURL}/search?q=${searchText}`;
     }
-  }
+  };
 
   useEffect(() => {
     switch (showSearch) {
@@ -68,8 +70,8 @@ function Home(props) {
   };
 
   const handleAboutModal = (value) => {
-    setOpenAbout(value)
-  }
+    setOpenAbout(value);
+  };
 
   const changeSearchEngine = () => {
     const engines = ["google", "bing", "yahoo"];
@@ -173,7 +175,11 @@ function Home(props) {
               <Tooltip tooltip="Fullscreen">
                 <button
                   className="flex flex-row items-center gap-1 font-medium hover:text-gray-200"
-                  onClick={!handleFullscreen.active ? handleFullscreen.enter : handleFullscreen.exit}
+                  onClick={
+                    !handleFullscreen.active
+                      ? handleFullscreen.enter
+                      : handleFullscreen.exit
+                  }
                 >
                   <FullscreenIcon />
                 </button>
@@ -182,7 +188,9 @@ function Home(props) {
               <Tooltip tooltip="About">
                 <button
                   className="flex flex-row items-center gap-1 font-medium hover:text-gray-200"
-                  onClick={() => { handleAboutModal(true) }}
+                  onClick={() => {
+                    handleAboutModal(true);
+                  }}
                 >
                   <InfoIcon />
                 </button>
