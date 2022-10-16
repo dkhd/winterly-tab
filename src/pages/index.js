@@ -2,11 +2,15 @@ import React, { useEffect, useState } from "react";
 import { Blurhash } from "react-blurhash";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import { retrieveImage } from "../util/index";
-import InfoIcon from "@mui/icons-material/Info";
-import FullscreenIcon from "@mui/icons-material/Fullscreen";
-import AutorenewIcon from "@mui/icons-material/Autorenew";
-import CameraIcon from "@mui/icons-material/Camera";
-import SearchIcon from "@mui/icons-material/Search";
+import { getStorageItem, setStorageItem } from "../util/localstorage";
+import {
+  Info as InfoIcon,
+  Fullscreen as FullscreenIcon,
+  Autorenew as AutorenewIcon,
+  Camera as CameraIcon,
+  Search as SearchIcon,
+  Settings as SettingsIcon,
+} from "@mui/icons-material";
 
 import { ReactComponent as BingLogo } from "../svg/bing.svg";
 import { ReactComponent as GoogleLogo } from "../svg/google.svg";
@@ -15,6 +19,7 @@ import { ReactComponent as YahooLogo } from "../svg/yahoo.svg";
 import Clock from "../components/clock";
 import About from "../components/about";
 import Quote from "../components/quotes";
+import Settings from "../components/settings";
 import Tooltip from "../components/Tooltip/tooltip";
 
 function Home(props) {
@@ -24,6 +29,11 @@ function Home(props) {
   const [data, setData] = useState({});
   const [openAbout, setOpenAbout] = useState(false);
   const [searchText, setSearchText] = useState("");
+  const [openSettings, setOpenSettings] = useState(false);
+  const [timeFormat, setTimeFormat] = useState(
+    getStorageItem("timeFormat") || "12"
+  );
+  const [name, setName] = useState(getStorageItem("name") || "");
 
   const handleFullscreen = useFullScreenHandle();
 
@@ -69,6 +79,21 @@ function Home(props) {
 
   const handleAboutModal = (value) => {
     setOpenAbout(value);
+  };
+
+  const handleSettingsDrawer = (value) => {
+    setOpenSettings(value);
+  };
+
+  const changeTimeFormat = (value) => {
+    setStorageItem("timeFormat", value);
+    setTimeFormat(value);
+  };
+
+  const changeName = (value) => {
+    console.log("asdasd");
+    setStorageItem("name", value);
+    setName(value);
   };
 
   const changeSearchEngine = () => {
@@ -202,10 +227,29 @@ function Home(props) {
                   <SearchIcon />
                 </button>
               </Tooltip>
+              &nbsp; &middot; &nbsp;
+              <Tooltip tooltip="Settings" addon="break-word">
+                <button
+                  className="flex flex-row items-center gap-1 font-medium hover:text-gray-200"
+                  onClick={() => {
+                    handleSettingsDrawer(true);
+                  }}
+                >
+                  <SettingsIcon />
+                </button>
+              </Tooltip>
             </div>
           </div>
         </FullScreen>
       ) : null}
+      <Settings
+        open={openSettings}
+        closeModal={() => handleSettingsDrawer(false)}
+        checkedFormat={timeFormat === "24"}
+        changeTimeFormat={changeTimeFormat}
+        username={name}
+        changeName={changeName}
+      />
     </div>
   );
 }
