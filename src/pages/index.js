@@ -170,7 +170,7 @@ function Home(props) {
               </div>
             </div>
             <div className="absolute bottom-5 left-5 flex flex-row w-100 text-sm text-white p-3 bg-opacity-20 bg-black rounded-sm">
-              <Clock></Clock>
+              <Clock timeFormat={timeFormat}></Clock>
             </div>
             <div className="absolute bottom-5 left-2/4 transform -translate-x-2/4 w-100 text-base text-white text-center bg-opacity-20 bg-black rounded-sm">
               <Quote />
