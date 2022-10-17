@@ -159,7 +159,8 @@ function Home(props) {
                     className="pl-4 h-full w-full outline-none text-sm text-white bg-transparent placeholder-gray-100"
                     type="text"
                     id="search"
-                    placeholder="Search something.."
+                  
+                    placeholder={ (name.length > 0 ? "Hello " + name + "! " : "") + "Search something.."}
                     value={searchText}
                     autoComplete="off"
                     onChange={(e) => setSearchText(e.target.value)}
