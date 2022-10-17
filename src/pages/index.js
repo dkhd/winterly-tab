@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Blurhash } from "react-blurhash";
-import { SiMicrosoftbing } from "react-icons/si";
-import { RiGoogleLine } from "react-icons/ri";
 import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import { retrieveImage } from "../util/index";
 import InfoIcon from "@mui/icons-material/Info";
@@ -38,14 +36,14 @@ function Home(props) {
   useEffect(() => {
     switch (showSearch) {
       case "yahoo":
-        toggleBaseURL("https://search.yahoo.com")
+        toggleBaseURL("https://search.yahoo.com");
         break;
       case "bing":
-        toggleBaseURL("https://www.bing.com")
+        toggleBaseURL("https://www.bing.com");
         break;
-    
+
       default:
-        toggleBaseURL("https://www.google.com")
+        toggleBaseURL("https://www.google.com");
         break;
     }
   }, [showSearch]);
@@ -77,31 +75,31 @@ function Home(props) {
     const engines = ["google", "bing", "yahoo"];
     let idx = 0;
 
-    const engineIdx = engines.findIndex(e => showSearch === e);
+    const engineIdx = engines.findIndex((e) => showSearch === e);
 
-    if (engineIdx > -1) idx = engineIdx+1;
-    
-    if(idx > 2) idx = 0;
-    
-    toggleSearch(engines[idx])
-  }
+    if (engineIdx > -1) idx = engineIdx + 1;
+
+    if (idx > 2) idx = 0;
+
+    toggleSearch(engines[idx]);
+  };
 
   const renderSearchIcon = (engine) => {
     let cmp;
     switch (showSearch) {
       case "bing":
-        cmp =  <BingLogo className="h-full w-full" />
+        cmp = <BingLogo className="h-full w-full" />;
         break;
       case "yahoo":
-        cmp =  <YahooLogo className="h-full w-full" />
+        cmp = <YahooLogo className="h-full w-full" />;
         break;
-    
+
       default:
-        cmp =  <GoogleLogo className="h-full w-full" />
+        cmp = <GoogleLogo className="h-full w-full" />;
         break;
     }
-    return cmp
-  }
+    return cmp;
+  };
 
   return (
     <div>
@@ -123,7 +121,7 @@ function Home(props) {
             <div className="flex absolute top-0 left-1/2 transform -translate-x-1/2 p-3 my-48">
               <div className="grid grid-cols-12 grid-rows-1 rounded-md bg-opacity-40 bg-black overflow-hidden">
                 <div className="pl-4 col-span-2 h-14 w-full">
-                  { renderSearchIcon(showSearch) }
+                  {renderSearchIcon(showSearch)}
                 </div>
                 <div className="col-span-10 h-full w-full">
                   <input

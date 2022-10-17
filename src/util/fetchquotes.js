@@ -1,17 +1,14 @@
-
-let quotesCollection = [];
-
-fetch('https://type.fit/api/quotes', {
-    mode: 'cors'
-})
+const fetchQuotes = () => {
+  return fetch("https://type.fit/api/quotes", {
+    mode: "cors",
+  })
     .then(function (res) {
-        return res.json();
-    })
-    .then(function (res) {
-        quotesCollection = res
+      return res.json();
     })
     .catch(function (err) {
-        console.log(err);
-    })
+      console.log(err);
+      return err;
+    });
+};
 
-export { quotesCollection };
+export { fetchQuotes };
